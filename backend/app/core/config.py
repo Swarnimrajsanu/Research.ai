@@ -5,9 +5,9 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Research.ai"
     DEBUG: bool = True
     
-    # OpenAI
-    OPENAI_API_KEY: str
-    LLM_MODEL: str = "gpt-4-turbo-preview"
+    # OpenRouter
+    OPENROUTER_API_KEY: str
+    LLM_MODEL: str = "openai/gpt-4o-mini"
     
     # Search
     TAVILY_API_KEY: str
@@ -15,6 +15,6 @@ class Settings(BaseSettings):
     # Redis
     REDIS_URL: Optional[str] = None
     
-    model_config = SettingsConfigDict(env_file="backend/.env")
+    model_config = SettingsConfigDict(env_file=".env")
 
 settings = Settings()
