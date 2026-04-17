@@ -14,6 +14,10 @@ class Settings(BaseSettings):
     
     # Redis
     REDIS_URL: Optional[str] = None
+    # Supabase Auth & DB
+    SUPABASE_URL: str
+    SUPABASE_ANON_KEY: str
+    SUPABASE_JWT_SECRET: str
     
     model_config = SettingsConfigDict(env_file=".env")
 
